@@ -1,4 +1,4 @@
-package gianmarco.project2;
+package project2;
 
 public enum Rank {
     PROFESSOR, ADJUNCT

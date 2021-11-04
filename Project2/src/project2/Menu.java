@@ -1,21 +1,40 @@
-package gianmarco.project2;
+package project2;
 
 import java.util.Scanner;
 
 public class Menu {
 
-        private Menu() {
+    private Menu() {
             throw new IllegalStateException("Utility Class");
         }
 
+    public static String getID(Class neededClass) {
+        if (neededClass.equals(Student.class)) {
+            System.out.println("Enter the Student ID: ");
+            return new Scanner(System.in).nextLine();
+        }
+
+        if (neededClass.equals(Faculty.class)) {
+            System.out.println("Enter the Faculty ID: ");
+            return new Scanner(System.in).nextLine();
+        }
+
+        if (neededClass.equals(Staff.class)) {
+            System.out.println("Enter the Staff ID: ");
+            return new Scanner(System.in).nextLine();
+        }
+        return "";
+    }
+
     public static int getChoice() {
-        System.out.println("1- Enter the information of the faculty member");
-        System.out.println("2- Enter the information of the two students");
-        System.out.println("3- Print tuition invoice ");
-        System.out.println("4- Print faculty information");
-        System.out.println("5- Enter the information of the staff member");
-        System.out.println("6- Print the information of the staff member");
+        System.out.println("1- Enter the information of a faculty member");
+        System.out.println("2- Enter the information of a student");
+        System.out.println("3- Print tuition invoice for a student");
+        System.out.println("4- Print the information for a faculty member");
+        System.out.println("5- Enter the information of a staff member");
+        System.out.println("6- Print the information of a staff member");
         System.out.println("7- Exit Program");
+        System.out.println("8- Print the information of all stored in the Database");
 
         System.out.println("Enter your selection");
         String option = new Scanner(System.in).nextLine();
@@ -67,6 +86,4 @@ public class Menu {
         System.out.println("Invalid input, please try again!");
         return getStatus();
     }
-
-
 }

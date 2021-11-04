@@ -1,5 +1,5 @@
-package gianmarco.project2;
+package project2;
 
 public abstract class Employee extends Person {
-
+    Departments department;
 }

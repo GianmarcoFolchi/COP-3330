@@ -1,8 +1,8 @@
-package gianmarco.project2;
+package project2;
 
 abstract class Person {
-    private String name;
-    private String id;
+    protected String name;
+    protected String id;
 
     protected Person() {
         this.id = "";

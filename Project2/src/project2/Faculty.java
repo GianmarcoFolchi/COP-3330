@@ -1,8 +1,8 @@
-package gianmarco.project2;
+package project2;
 
 import java.util.Scanner;
 
-public class Faculty extends Person {
+public class Faculty extends Employee {
 
     private Departments department;
     private Rank rank;
@@ -13,7 +13,8 @@ public class Faculty extends Person {
     }
 
     public Faculty(String name, String id, Departments department, Rank rank) {
-        super(name, id);
+        this.name = name;
+        this.id = id;
         this.department = department;
         this.rank = rank;
     }
@@ -43,7 +44,7 @@ public class Faculty extends Person {
         System.out.print("ID: ");
         String id = scanner.nextLine();
 
-        System.out.print("Project2.Rank:");
+        System.out.print("Rank:");
         Rank rank = Menu.getRank();
 
         System.out.print("Department: ");
@@ -53,9 +54,11 @@ public class Faculty extends Person {
     }
 
     @Override
-    public String toString() {
-        return "--------------------------\n " + getName() + "\t " + getId() + "\n" +
-                getDepartment() + ", " + getRank() + "\n--------------------------\n";
+    public void print() {
+
+        System.out.println("--------------------------\n " + getName() + "\t " + getId() + "\n" +
+                getDepartment() + ", " + getRank() + "\n--------------------------\n");
+
     }
 }
 

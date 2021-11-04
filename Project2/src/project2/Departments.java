@@ -1,4 +1,4 @@
-package gianmarco.project2;
+package project2;
 
 public enum Departments {
     MATHEMATICS, ENGINEERING, ENGLISH
